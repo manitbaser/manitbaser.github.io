@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -57,10 +58,11 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
-  <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
+  <link rel="icon" type="image/png" href={{ "/libs/logo.svg" | prepend: site.baseurl }}>
+  <link rel="shortcut icon" type="image/png" href={{ "/libs/logo.svg" | prepend: site.baseurl }}>
 
 </head>
+
 <body>
 
   <!-- Primary Page Layout
@@ -70,33 +72,35 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width"
+              src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
         </div>
         <div class="nine columns main-description">
-            <h1>{{ site.data.main_info.name }}</h1>
-            <p>{{ site.data.main_info.title }}</p>
-            <p>{{ site.data.main_info.email }}</p>
-            <p>
-              <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
+          <h1>{{ site.data.main_info.name }}</h1>
+          <p>{{ site.data.main_info.title }}</p>
+          <p>{{ site.data.main_info.more }}</p>
+          <p>{{ site.data.main_info.email }}</p>
+          <p>
+            <!-- <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
                 <i class="fa-brands fa-bluesky" style="padding-top: 10px"></i>
-              </span>
+              </span> -->
 
-              <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
+            <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
                 <i class="fa-brands fa-twitter fa-lg"></i>
-              </span>
+              </span> -->
 
-              <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
-                <i class="fa-brands fa-linkedin fa-lg"></i>
-              </span>
+            <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
+              <i class="fa-brands fa-linkedin fa-lg"></i>
+            </span>
 
-              <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-                <i class="fa-brands fa-github fa-lg"></i>
-              </span>
+            <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
+              <i class="fa-brands fa-github fa-lg"></i>
+            </span>
 
-              <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
-                <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-              </span>
-            </p>
+            <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
+              <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
+            </span>
+          </p>
         </div>
       </div>
     </section>
@@ -105,11 +109,16 @@
     <nav class="navbar">
       <div class="container">
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#prospective-students" | prepend: site.baseurl }}>Prospective Students</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" | prepend: site.baseurl }}>Publications</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a>
+          </li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#news" | prepend: site.baseurl }}>News</a>
+          </li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#teaching" | prepend: site.baseurl
+              }}>Teaching</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/publications.html" | prepend: site.baseurl
+              }}>Publications</a></li>
           <!--<li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>-->
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" | prepend: site.baseurl }}>Vita</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/vita.html" | prepend: site.baseurl }}>Vita</a></li>
         </ul>
       </div>
     </nav>
@@ -125,13 +134,13 @@
           {{ site.data.main_info.email }}
         </div>
         <div class="four columns">
-          <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
+          <!-- <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
             <i class="fa-brands fa-bluesky fa-sm" style="padding-top: 10px"></i>
-          </span>
+          </span> -->
 
-          <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
+          <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
             <i class="fa-brands fa-twitter"></i>
-          </span>
+          </span> -->
 
           <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
             <i class="fa-brands fa-linkedin"></i>
@@ -156,7 +165,8 @@
   <!-- do not remove -->
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>

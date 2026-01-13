@@ -1,21 +1,21 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
   // Variables
   var $codeSnippets = $('.code-example-body'),
-      $nav = $('.navbar'),
-      $body = $('body'),
-      $window = $(window),
-      $popoverLink = $('[data-popover]'),
-      navOffsetTop = $nav.offset().top,
-      $document = $(document),
-      entityMap = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': '&quot;',
-        "'": '&#39;',
-        "/": '&#x2F;'
-      }
+    $nav = $('.navbar'),
+    $body = $('body'),
+    $window = $(window),
+    $popoverLink = $('[data-popover]'),
+    navOffsetTop = $nav.offset().top,
+    $document = $(document),
+    entityMap = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': '&quot;',
+      "'": '&#39;',
+      "/": '&#x2F;'
+    }
 
   function init() {
     $window.on('scroll', onScroll)
@@ -30,13 +30,13 @@ $(document).ready(function() {
     e.preventDefault();
     $(document).off("scroll");
     var target = this.hash,
-        menu = target;
+      menu = target;
     $target = $(target);
     $('html, body').stop().animate({
-        'scrollTop': $target.offset().top-40
+      'scrollTop': $target.offset().top - 40
     }, 0, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
+      window.location.hash = target;
+      $(document).on("scroll", onScroll);
     });
   }
 
@@ -49,16 +49,16 @@ $(document).ready(function() {
   }
 
   function closePopover(e) {
-    if($('.popover.open').length > 0) {
+    if ($('.popover.open').length > 0) {
       $('.popover').removeClass('open')
     }
   }
 
-  $("#button").click(function() {
+  $("#button").click(function () {
     $('html, body').animate({
-        scrollTop: $("#elementtoScrollToID").offset().top
+      scrollTop: $("#elementtoScrollToID").offset().top
     }, 2000);
-});
+  });
 
   function resize() {
     $body.removeClass('has-docked-nav')
@@ -67,10 +67,10 @@ $(document).ready(function() {
   }
 
   function onScroll() {
-    if(navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')) {
+    if (navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')) {
       $body.addClass('has-docked-nav')
     }
-    if(navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
+    if (navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
       $body.removeClass('has-docked-nav')
     }
   }
@@ -82,7 +82,7 @@ $(document).ready(function() {
   }
 
   function buildSnippets() {
-    $codeSnippets.each(function() {
+    $codeSnippets.each(function () {
       var newContent = escapeHtml($(this).html())
       $(this).html(newContent)
     })

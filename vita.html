@@ -1,0 +1,53 @@
+---
+layout: default
+title: Vita
+---
+<!-- ========== RESUME ========== -->
+<div class="docs-section" id="resume">
+    <h4>Vitæ</h4>
+
+    <p>Full Resume in <a href={{ "/assets/cv/cv_web.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p>
+
+    <!-- The Timeline -->
+    <ul class="timeline">
+        {% for exp in site.data.experience.experiences %}
+        <li>
+            {% if exp.category == "work" %}
+            <div class="direction-l">
+                <div class="flag-wrapper">
+                    <span class="flag">{{ exp.place }}</span>
+                    <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+                </div>
+                <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle }}</div>
+            </div>
+            {% if exp.logo %}
+            <div class="direction-r">
+                <div class="desc"
+                    style="background: none; box-shadow: none; display: flex; justify-content: start; margin-top: 0;">
+                    <img src="{{ exp.logo | prepend: site.baseurl }}" alt="{{ exp.place }}"
+                        style="max-height: 60px; max-width: 150px; border-radius: 5px;">
+                </div>
+            </div>
+            {% endif %}
+            {% else %}
+            <div class="direction-r">
+                <div class="flag-wrapper">
+                    <span class="flag">{{ exp.place }}</span>
+                    <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+                </div>
+                <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle }}</div>
+            </div>
+            {% if exp.logo %}
+            <div class="direction-l">
+                <div class="desc"
+                    style="background: none; box-shadow: none; display: flex; justify-content: end; margin-top: 0;">
+                    <img src="{{ exp.logo | prepend: site.baseurl }}" alt="{{ exp.place }}"
+                        style="max-height: 60px; max-width: 150px; border-radius: 5px;">
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
