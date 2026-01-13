@@ -9,11 +9,11 @@
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
   <meta name="description" content="Martin Saveski">
   <meta name="author" content="Martin Saveski">
-  <meta property="og:title" content="Martin Saveski" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.martinsaveski.com" />
-  <meta property="og:site_name" content="Martin Saveski" />
-  <link rel="canonical" href="http://www.martinsaveski.com" />
+  <meta property="og:title" content="Martin Saveski"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://www.martinsaveski.com"/>
+  <meta property="og:site_name" content="Martin Saveski"/>
+  <link rel="canonical" href="http://www.martinsaveski.com"/>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,41 +25,42 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href="{{ "/libs/external/skeleton/normalize.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/libs/external/skeleton/skeleton.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/libs/custom/my_css.css" | relative_url }}">
 
   <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
+  <script src="{{ '/libs/external/jquery-3.1.1.min.js' | relative_url }}"></script>
 
   <!-- Font-Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– 
-  <link rel="stylesheet" href={{ "/libs/external/font-awesome-4.7.0/css/font-awesome.min.css" | prepend: site.baseurl }}> -->
-  <link rel="stylesheet" href={{ "/libs/external/fontawesome-free-6.6.0-web/css/all.min.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href="{{ "/libs/external/font-awesome-4.7.0/css/font-awesome.min.css" | relative_url }}"> -->
+  <link rel="stylesheet" href="{{ "/libs/external/fontawesome-free-6.6.0-web/css/all.min.css" | relative_url }}">
 
   <!-- Academicons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href="{{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | relative_url
+    }}"">
 
   <!-- Skeleton tabs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/skeleton_tabs/skeleton-tabs.css" | prepend: site.baseurl }}>
-  <script src={{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | prepend: site.baseurl }}></script>
+  <link rel="stylesheet" href="{{ "/libs/external/skeleton_tabs/skeleton-tabs.css" | relative_url }}">
+  <script src="{{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | relative_url }}"></script>
 
   <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/timeline.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href="{{ "/libs/external/timeline.css" | relative_url }}">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
-  <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
+  <!--<link rel="stylesheet" href="{{ "/libs/external/github-prettify-theme.css" | relative_url }}">-->
+  <script src="{{ "/libs/custom/my_js.js" | relative_url }}"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href={{ "/libs/logo.svg" | prepend: site.baseurl }}>
-  <link rel="shortcut icon" type="image/png" href={{ "/libs/logo.svg" | prepend: site.baseurl }}>
+  <link rel="icon" type="image/png" href="{{ "/libs/logo.svg" | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ "/libs/logo.svg" | relative_url }}">
 
 </head>
 
@@ -109,16 +110,16 @@
     <nav class="navbar">
       <div class="container">
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a>
+          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#bio" | relative_url }}">Bio</a>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#news" | prepend: site.baseurl }}>News</a>
+          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#news" | relative_url }}">News</a>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#teaching" | prepend: site.baseurl
-              }}>Teaching</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/publications.html" | prepend: site.baseurl
-              }}>Publications</a></li>
-          <!--<li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>-->
-          <li class="navbar-item"><a class="navbar-link" href={{ "/vita.html" | prepend: site.baseurl }}>Vita</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#teaching" | relative_url
+              }}">Teaching</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="{{ "/publications.html" | relative_url
+              }}">Publications</a></li>
+          <!--<li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#projects" | relative_url }}">Projects</a></li>-->
+          <li class="navbar-item"><a class="navbar-link" href="{{ "/vita.html" | relative_url }}">Vita</a></li>
         </ul>
       </div>
     </nav>

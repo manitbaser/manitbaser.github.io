@@ -1,8 +1,12 @@
-source:      .
-destination: ./_site
-includes:    ./_includes
-baseurl: /manitbaser
+# source:      .
+# destination: ./_site
+# includes:    ./_includes
+# baseurl: /manitbaser
 
-collections:
-  projects:
-    output: true
+# collections:
+#   projects:
+#     output: true
+
+title: Manit Baser
+url: https://manitbaser.github.io
+baseurl: ""
