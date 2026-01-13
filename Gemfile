@@ -1,4 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2"
-gem "webrick", "~> 1.7"
+gem "jekyll", "~> 4.3"
+
+# Required for Ruby 3.4 on Netlify
+gem "webrick"
+gem "logger"
+gem "csv"
