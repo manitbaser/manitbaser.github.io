@@ -8,6 +8,7 @@ papers:
     authors: "<b>M Baser</b>, DM Divakaran, M Gurusamy"
     venue: "Transactions on Machine Learning Research (TMLR), 2026"
     paper_pdf: "https://arxiv.org/pdf/2506.01386"
+    code: "https://github.com/manitbaser/KnowGIC"
     selected: y
     year: 2026
   
@@ -26,13 +27,6 @@ papers:
     year: 2025
 
   # 2024
-  - title: "CRYOMOVE: Cold Chain Real-Time Management of Vaccine Delivery Using PCM and Deep Learning"
-    authors: "T Bhatt, <b>M Baser</b>, A Tyagi, EYK Ng"
-    venue: "Applied Thermal Engineering, 2024"
-    paper_pdf: "https://www.sciencedirect.com/science/article/abs/pii/S1359431124016302"
-    selected: y
-    year: 2024
-
   - title: "MEC-Hopper: DRL-Based Adaptive Multi-Hop Service Provisioning in UAV-Assisted MEC"
     authors: "DD Kulkarni, <b>M Baser</b>, M Gurusamy"
     venue: "IEEE 100th Vehicular Technology Conference (IEEE VTC2024-Fall), 2024"
@@ -44,6 +38,15 @@ papers:
     authors: "G Bansal, <b>M Baser</b>, V Chamola"
     venue: "IEEE Internet of Things Magazine, 2024"
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10643985"
+    video: "https://www.youtube.com/watch?v=U3PyaXU-TOI"
+    code: "https://github.com/manitbaser/CoviFight"
+    selected: y
+    year: 2024
+
+  - title: "CRYOMOVE: Cold Chain Real-Time Management of Vaccine Delivery Using PCM and Deep Learning"
+    authors: "T Bhatt, <b>M Baser</b>, A Tyagi, EYK Ng"
+    venue: "Applied Thermal Engineering, 2024"
+    paper_pdf: "https://www.sciencedirect.com/science/article/abs/pii/S1359431124016302"
     selected: y
     year: 2024
 

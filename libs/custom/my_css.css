@@ -1,5 +1,94 @@
+/* CSS Variables for Theme Support */
+:root {
+  /* Light theme (default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: rgb(246, 250, 243);
+  --bg-tertiary: rgba(211, 210, 210, 0.15);
+  --bg-button: rgb(245, 245, 245);
+  --bg-button-hover: rgb(255, 255, 255);
+  --bg-main-button: rgb(217, 247, 255);
+  --bg-main-button-hover: rgb(134, 231, 255);
+  --bg-navbar-button: rgba(211, 210, 210, 0.15);
+  --bg-navbar-button-hover: rgba(211, 210, 210, 0.3);
+
+  --text-primary: #222222;
+  --text-secondary: rgba(0, 0, 0, 0.60);
+  --text-tertiary: rgba(0, 0, 0, 0.4);
+  --text-button: #000000;
+  --text-button-hover: #1d282c;
+  --text-main-button: #000000;
+  --text-main-button-hover: #1d282c;
+
+  /* --border-color: #eee; */
+  --border-color-strong: rgba(0, 0, 0, 0.2);
+  --border-venue: rgb(193, 241, 241);
+
+  --accent-primary: #33C3F0;
+  --accent-link: #0066cc;
+  --accent-date: #ff6b6b;
+
+  --year-label: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Timeline colors */
+  --timeline-flag-bg: rgb(248, 248, 248);
+  --timeline-time-bg: rgb(248, 248, 248);
+  --timeline-desc-bg: rgb(245, 245, 245);
+  --timeline-flag-arrow: rgb(248, 248, 248);
+  --timeline-desc-arrow: rgb(255, 255, 255);
+  --timeline-time-color: rgb(51, 0, 111);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #1d0825;
+  --bg-tertiary: rgba(60, 60, 60, 0.3);
+  --bg-button: #3a3a3a;
+  --bg-button-hover: #4a4a4a;
+  --bg-main-button: #3a0c4c;
+  --bg-main-button-hover: #4a0f61;
+  --bg-navbar-button: rgba(60, 60, 60, 0.3);
+  --bg-navbar-button-hover: rgba(80, 80, 80, 0.5);
+
+  --text-primary: #e0e0e0;
+  --text-secondary: rgba(255, 255, 255, 0.70);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --text-button: #ffffff;
+  --text-button-hover: #ffffff;
+  --text-main-button: #a5a5a5;
+  --text-main-button-hover: #dfdcdc;
+
+  /* --border-color: #3a3a3a; */
+  --border-color-strong: rgba(255, 255, 255, 0.2);
+  --border-venue: #2a5555;
+
+  --accent-primary: #5ddbff;
+  --accent-link: #4da6ff;
+  --accent-date: #ff8a8a;
+
+  --year-label: #3a3a3a;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Timeline colors */
+  --timeline-flag-bg: #3a3a3a;
+  --timeline-time-bg: #3a3a3a;
+  --timeline-desc-bg: #2a2a2a;
+  --timeline-flag-arrow: #3a3a3a;
+  --timeline-desc-arrow: #2a2a2a;
+  --timeline-time-color: #b8b8ff;
+}
+
+/* Apply theme variables to body and common elements */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 h4 {
   letter-spacing: .1rem;
+  color: var(--text-primary);
 }
 
 .container {
@@ -7,9 +96,17 @@ h4 {
 }
 
 .header {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: left;
+  background-color: var(--bg-secondary);
+  width: 100%;
+}
+
+.profile-pic {
+  box-shadow: 0 0 20px 5px var(--shadow-color);
+  border-radius: 4px;
+  /* Optional: adds slightly rounded corners if desired, can remove if not needed */
 }
 
 .main-description h1 {
@@ -45,9 +142,26 @@ h4 {
   display: inline-block;
   height: 25px;
   padding: 0 25px;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 25px;
   text-transform: none;
+  color: var(--text-button);
+  background-color: var(--bg-button);
+  border: none;
+}
+
+.venue-badge {
+  display: inline-block;
+  /* background-color: rgb(246, 250, 243); */
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 2px solid var(--border-venue);
+}
+
+.paper .button:hover {
+  background-color: var(--bg-button-hover);
+  color: var(--accent-primary);
 }
 
 .section-header {
@@ -58,15 +172,15 @@ h4 {
 }
 
 .docs-section {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding: 4rem 0;
   margin-bottom: 0;
 }
 
 .footer {
   text-align: center;
-  color: rgba(0, 0, 0, 0.4);
-  border-top: 1px solid #eee;
+  color: var(--text-tertiary);
+  border-top: 1px solid var(--border-color);
   padding: 15px 0 40px 0;
   margin-bottom: 0;
 }
@@ -80,7 +194,7 @@ h4 {
 }
 
 .title-subtitle h5 {
-  color: rgba(0, 0, 0, 0.60);
+  color: var(--text-secondary);
 }
 
 .image {
@@ -88,7 +202,7 @@ h4 {
 }
 
 .news-section {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding: 4rem 0;
   margin-bottom: 0;
 }
@@ -104,7 +218,7 @@ h4 {
 }
 
 .news-section .date {
-  color: #ff6b6b;
+  color: var(--accent-date);
   font-weight: 500;
   min-width: 110px;
   /* Fixed width to align all text */
@@ -116,7 +230,7 @@ h4 {
 }
 
 .news-section a {
-  color: #0066cc;
+  color: var(--accent-link);
   text-decoration: none;
 }
 
@@ -130,7 +244,7 @@ h4 {
 }
 
 .project-image-container {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color-strong);
   padding: 3px;
   transition: 0.3s;
 }
@@ -150,7 +264,8 @@ h4 {
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
-    margin-top: 5rem;
+    margin-top: 0;
+    padding-top: calc(60px + 5rem);
   }
 }
 
@@ -167,10 +282,10 @@ h4 {
     display: block;
     width: 100%;
     height: 6.5rem;
-    background: #fff;
+    background: var(--bg-primary);
     z-index: 99;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .navbar-spacer {
@@ -200,11 +315,57 @@ h4 {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222;
+    color: var(--text-primary);
   }
 
   .navbar-link.active {
-    color: #33C3F0;
+    color: var(--accent-primary);
+  }
+
+  .navbar-link.navbar-button {
+    display: inline-block;
+    height: 38px;
+    border-radius: 4px;
+    background-color: var(--bg-navbar-button);
+    border: none;
+    padding: 0 15px;
+    margin-top: 1.3rem;
+    line-height: 38px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar-link.navbar-button:hover {
+    background-color: var(--bg-navbar-button-hover);
+    color: var(--accent-primary);
+  }
+
+  .main-button {
+    margin-top: 1rem;
+    height: 30px;
+    line-height: 30px;
+    background-color: var(--bg-main-button);
+    border: none;
+    padding: 0 15px;
+    transition: all 0.2s ease-in-out;
+    color: var(--text-main-button);
+  }
+
+  .main-button:hover {
+    background-color: var(--bg-main-button-hover);
+    color: var(--text-main-button-hover);
+  }
+
+
+  .social-button {
+    background-color: var(--bg-navbar-button);
+    border: none;
+    padding: 0 15px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .social-button:hover {
+    background-color: var(--bg-navbar-button-hover);
+    color: var(--accent-primary);
   }
 
   .has-docked-nav .navbar {
@@ -232,14 +393,14 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     top: 92%;
     left: -50%;
-    -webkit-filter: drop-shadow(0 0 6px rgba(0, 0, 0, .1));
-    -moz-filter: drop-shadow(0 0 6px rgba(0, 0, 0, .1));
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, .1));
+    -webkit-filter: drop-shadow(0 0 6px var(--shadow-color));
+    -moz-filter: drop-shadow(0 0 6px var(--shadow-color));
+    filter: drop-shadow(0 0 6px var(--shadow-color));
   }
 
   .popover-item:first-child .popover-link:after,
@@ -281,10 +442,10 @@ h4 {
 
   .popover-link {
     position: relative;
-    color: #222;
+    color: var(--text-primary);
     display: block;
     padding: 8px 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.0rem;
@@ -303,13 +464,13 @@ h4 {
   }
 
   .popover-link:hover {
-    color: #fff;
-    background: #33C3F0;
+    color: var(--bg-primary);
+    background: var(--accent-primary);
   }
 
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
-    border-bottom-color: #33C3F0;
+    border-bottom-color: var(--accent-primary);
   }
 }
 
@@ -322,11 +483,81 @@ h4 {
 .separator-line {
   flex-grow: 1;
   height: 1px;
-  background-color: #eee;
+  background-color: var(--border-color);
   margin-right: 1rem;
 }
 
 .year-label {
-  color: #e0e0e0;
+  color: var(--year-label);
   font-size: 2.5rem;
+}
+
+/* Prevents horizontal scroll from full-width backgrounds */
+body {
+  overflow-x: hidden;
+}
+
+#bio,
+#teaching {
+  position: relative;
+  /* Removed padding/border-radius to defer to default or specific layout needs */
+}
+
+#bio::before,
+#teaching::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background-color: var(--bg-tertiary);
+  z-index: -1;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--bg-button);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-button-hover);
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  color: var(--text-primary);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] ul.tab-nav li .button {
+  background-color: var(--bg-button);
+  color: var(--text-button);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] ul.tab-nav li .button.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-primary);
 }

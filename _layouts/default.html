@@ -40,8 +40,7 @@
 
   <!-- Academicons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | relative_url
-    }}"">
+  <link rel="stylesheet" href="{{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | relative_url }}"">
 
   <!-- Skeleton tabs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -68,12 +67,11 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-
-    <section class="header">
+  <section class="header">
+    <div class="container">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width"
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width profile-pic"
               src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
         </div>
         <div class="nine columns main-description">
@@ -82,44 +80,43 @@
           <p>{{ site.data.main_info.more }}</p>
           <p>{{ site.data.main_info.email }}</p>
           <p>
-            <!-- <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
-                <i class="fa-brands fa-bluesky" style="padding-top: 10px"></i>
-              </span> -->
-
-            <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
-                <i class="fa-brands fa-twitter fa-lg"></i>
-              </span> -->
-
-            <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
-              <i class="fa-brands fa-linkedin fa-lg"></i>
-            </span>
-
-            <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-              <i class="fa-brands fa-github fa-lg"></i>
-            </span>
-
-            <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
-              <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-            </span>
+            <a href="{{ site.data.main_info.linkedin }}" class="button icon main-button">LinkedIn <i
+                class="fa-brands fa-linkedin fa-lg"></i></a> &nbsp;
+            <a href="{{ site.data.main_info.github }}" class="button icon main-button">GitHub <i
+                class="fa-brands fa-github fa-lg"></i></a> &nbsp;
+            <a href="{{ site.data.main_info.google_scholar }}" class="button icon main-button">Scholar <i
+                class="ai ai-google-scholar ai-lg"></i></a>
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon" id="themeIcon"></i>
+  </button>
+
+
+  <div class="container">
 
     <div class="navbar-spacer"></div>
     <nav class="navbar">
       <div class="container">
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#bio" | relative_url }}">Bio</a>
+          <li class="navbar-item"><a class="navbar-link navbar-button" href="{{ "/index.html#bio" | relative_url
+              }}">Bio</a>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#news" | relative_url }}">News</a>
+          <li class="navbar-item"><a class="navbar-link navbar-button" href="{{ "/index.html#news" | relative_url
+              }}">News</a>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#teaching" | relative_url
+          <li class="navbar-item"><a class="navbar-link navbar-button" href="{{ "/index.html#teaching" | relative_url
               }}">Teaching</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="{{ "/publications.html" | relative_url
+          <li class="navbar-item"><a class="navbar-link navbar-button" href="{{ "/publications.html" | relative_url
               }}">Publications</a></li>
           <!--<li class="navbar-item"><a class="navbar-link" href="{{ "/index.html#projects" | relative_url }}">Projects</a></li>-->
-          <li class="navbar-item"><a class="navbar-link" href="{{ "/vita.html" | relative_url }}">Vita</a></li>
+          <li class="navbar-item"><a class="navbar-link navbar-button" href="{{ "/vita.html" | relative_url
+              }}">Vita</a></li>
         </ul>
       </div>
     </nav>

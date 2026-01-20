@@ -3,116 +3,133 @@ layout: default
 title: Publications
 ---
 <!-- ========== PUBLICATIONS ========== -->
-<div class="docs-section" id="publications">
-    <h4>Publications</h4>
+<div class="container">
+    <div class="docs-section" id="publications">
+        <h4>Publications</h4>
 
-    <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google -->
-    <!-- Scholar</a>.<br /> -->
-    <!-- <sup>‡</sup> indicates equal contribution. -->
-    <!-- </p> -->
+        <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google -->
+        <!-- Scholar</a>.<br /> -->
+        <!-- <sup>‡</sup> indicates equal contribution. -->
+        <!-- </p> -->
 
-    <ul class="tab-nav">
+        <ul class="tab-nav">
 
-        <li>
-            <div class="button active" data-ref="#papers-all">All</div>
-        </li>
-        <li>
-            <div class="button" data-ref="#papers-selected">Selected</div>
-        </li>
-    </ul>
+            <li>
+                <div class="button active" data-ref="#papers-all">All</div>
+            </li>
+            <li>
+                <div class="button" data-ref="#papers-selected">Selected</div>
+            </li>
+        </ul>
 
-    <div class="tab-content">
-        <div class="tab-pane active" id="papers-all">
-            {% assign grouped_papers = site.data.publications.papers | group_by: "year" | sort: "name" | reverse %}
-            {% for group in grouped_papers %}
+        <div class="tab-content">
+            <div class="tab-pane active" id="papers-all">
+                {% assign grouped_papers = site.data.publications.papers | group_by: "year" | sort: "name" | reverse %}
+                {% for group in grouped_papers %}
 
-            <div class="year-separator">
-                <div class="separator-line"></div>
-                <div class="year-label">{{ group.name }}</div>
-            </div>
-
-            {% for paper in group.items %}
-            <div class="paper">
-                <p class="title"><b>{{ paper.title }}</b></p>
-                <p>{{ paper.authors }}</p>
-                <p><i>{{ paper.venue }}</i></p>
-                <div class="paper-buttons">
-                    {% if paper.paper_pdf %}
-                    <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-                    {% endif %}
-
-                    {% if paper.slides %}
-                    <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                    {% endif %}
-
-                    {% if paper.poster %}
-                    <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                    {% endif %}
-
-                    {% if paper.video %}
-                    <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                    {% endif %}
-
-                    {% if paper.code %}
-                    <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                    {% endif %}
-
-                    {% if paper.data %}
-                    <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-                    {% endif %}
-
+                <div class="year-separator">
+                    <div class="separator-line"></div>
+                    <div class="year-label">{{ group.name }}</div>
                 </div>
-            </div>
-            {% endfor %}
-            {% endfor %}
-        </div>
 
-        <div class="tab-pane" id="papers-selected">
-            {% assign selected_papers = site.data.publications.papers | where: "selected", "y" | group_by: "year" |
-            sort: "name" | reverse %}
-            {% for group in selected_papers %}
 
-            <div class="year-separator">
-                <div class="separator-line"></div>
-                <div class="year-label">{{ group.name }}</div>
-            </div>
 
-            {% for paper in group.items %}
-            <div class="paper">
-                <p class="title"><b>{{ paper.title }}</b></p>
-                <p>{{ paper.authors }}</p>
-                <p><i>{{ paper.venue }}</i></p>
-                <div class="paper-buttons">
-                    {% if paper.paper_pdf %}
-                    <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-                    {% endif %}
+                <!-- <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp; 
+                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp; 
+                            <a href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Slides <i class="fa-regular fa-file-powerpoint"></i></a> &nbsp;&nbsp; 
+                            <a href="https://huggingface.co/spaces/" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Demo <i class="fa-solid fa-laptop-code"></i></a>  -->
 
-                    {% if paper.slides %}
-                    <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                    {% endif %}
+                {% for paper in group.items %}
+                <div class="paper">
+                    <p class="title"><b>{{ paper.title }}</b></p>
+                    <p>{{ paper.authors }}</p>
+                    <p><span class="venue-badge">{{ paper.venue }}</span></p>
+                    <div class="paper-buttons">
+                        {% if paper.paper_pdf %}
+                        <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
+                                class="fa-solid fa-book-open"></i></a>
+                        {% endif %}
 
-                    {% if paper.poster %}
-                    <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                    {% endif %}
+                        {% if paper.slides %}
+                        <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides <i
+                                class="fa-regular fa-file-powerpoint"></i></a>
+                        {% endif %}
 
-                    {% if paper.video %}
-                    <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                    {% endif %}
+                        {% if paper.poster %}
+                        <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+                        {% endif %}
 
-                    {% if paper.code %}
-                    <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                    {% endif %}
+                        {% if paper.video %}
+                        <a class="button" href="{{ paper.video }}" target="_blank">Demo <i
+                                class="fa-solid fa-laptop-code"></i></a>
+                        {% endif %}
 
-                    {% if paper.data %}
-                    <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-                    {% endif %}
+                        {% if paper.code %}
+                        <a class="button" href="{{ paper.code }}" target="_blank">Code <i
+                                class="fa-solid fa-code"></i></a>
+                        {% endif %}
 
+                        {% if paper.data %}
+                        <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+                        {% endif %}
+
+                    </div>
                 </div>
+                {% endfor %}
+                {% endfor %}
             </div>
-            {% endfor %}
-            {% endfor %}
+
+            <div class="tab-pane" id="papers-selected">
+                {% assign selected_papers = site.data.publications.papers | where: "selected", "y" | group_by: "year" |
+                sort: "name" | reverse %}
+                {% for group in selected_papers %}
+
+                <div class="year-separator">
+                    <div class="separator-line"></div>
+                    <div class="year-label">{{ group.name }}</div>
+                </div>
+
+                {% for paper in group.items %}
+                <div class="paper">
+                    <p class="title"><b>{{ paper.title }}</b></p>
+                    <p>{{ paper.authors }}</p>
+                    <p><span class="venue-badge">{{ paper.venue }}</span></p>
+                    <div class="paper-buttons">
+                        {% if paper.paper_pdf %}
+                        <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
+                                class="fa-solid fa-book-open"></i></a>
+                        {% endif %}
+
+                        {% if paper.slides %}
+                        <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides <i
+                                class="fa-regular fa-file-powerpoint"></i></a>
+                        {% endif %}
+
+                        {% if paper.poster %}
+                        <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+                        {% endif %}
+
+                        {% if paper.video %}
+                        <a class="button" href="{{ paper.video }}" target="_blank">Demo <i
+                                class="fa-solid fa-laptop-code"></i></a>
+                        {% endif %}
+
+                        {% if paper.code %}
+                        <a class="button" href="{{ paper.code }}" target="_blank">Code <i
+                                class="fa-solid fa-code"></i></a>
+                        {% endif %}
+
+                        {% if paper.data %}
+                        <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+
+
         </div>
-
-
     </div>
 </div>
