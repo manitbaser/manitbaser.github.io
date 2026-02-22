@@ -2,8 +2,8 @@
 :root {
   /* Light theme (default) */
   --bg-primary: #ffffff;
-  --bg-secondary: rgb(246, 250, 243);
-  --bg-tertiary: rgba(211, 210, 210, 0.15);
+  --bg-secondary: #ffffff;
+  --bg-tertiary: rgba(255, 255, 255, 0.15);
   --bg-button: rgb(245, 245, 245);
   --bg-button-hover: rgb(255, 255, 255);
   --bg-main-button: rgb(217, 247, 255);
@@ -42,8 +42,8 @@
 /* Dark theme */
 [data-theme="dark"] {
   --bg-primary: #1a1a1a;
-  --bg-secondary: #1d0825;
-  --bg-tertiary: rgba(60, 60, 60, 0.3);
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #1a1a1a;
   --bg-button: #3a3a3a;
   --bg-button-hover: #4a4a4a;
   --bg-main-button: #3a0c4c;

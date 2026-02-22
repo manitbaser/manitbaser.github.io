@@ -1,13 +1,14 @@
 experiences:
 
-# - place: "A*STAR I2R, Singapore"
-#   time: "January 2026 – Present"
-#   title: "Research Intern"
-#   subtitle: ""
-#   category: "work"
+- place: "A*STAR I2R, Singapore"
+  time: "Feb 2026 – Present"
+  title: "Research Intern"
+  subtitle: ""
+  logo: "/assets/work-ex-icons/astar.png"
+  category: "work"
   
 - place: "National University of Singapore"
-  time: "2024–Present"
+  time: "Jan 2024–Present"
   title: "Ph.D."
   subtitle: "Electrical and Computer Engineering"
   logo: "/assets/work-ex-icons/nus_logo_full-vertical.jpg"
