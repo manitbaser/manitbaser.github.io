@@ -1,12 +1,16 @@
 papers:
     # 2026
-  # - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
-  #   authors: "<b>M Baser</b>, A Yildiz, DM Divakaran, M Gurusamy"
-  #   venue: "Preprint"
-  #   paper_pdf: "https://d197for5662m48.cloudfront.net/documents/publicationstatus/286768/preprint_pdf/3e99ce4b8787147379cd01a12dafdd74.pdf"
+  - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
+    authors: "<b>M Baser</b>, A Yildiz, DM Divakaran, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2603.19297"
+    code: "https://anonymous.4open.science/r/CLaRE-488E"
+    year: 2026
+
   - title: "ThinkEval: Practical Evaluation of Knowledge Leakage in LLM Editing using Thought-based Knowledge Graphs"
     authors: "<b>M Baser</b>, DM Divakaran, M Gurusamy"
     venue: "Transactions on Machine Learning Research (TMLR), 2026"
+    venue_type: "journal"
     paper_pdf: "https://arxiv.org/pdf/2506.01386"
     code: "https://github.com/manitbaser/KnowGIC"
     selected: y
@@ -15,6 +19,7 @@ papers:
   - title: "ARCANE: Adversarial Resilience and Adaptive Network Slicing for UAV-based MEC"
     authors: "DD Kulkarni, <b>M Baser</b>, M Gurusamy"
     venue: "IEEE Transactions on Network and Service Management (IEEE TNSM), 2026"
+    venue_type: "journal"
     paper_pdf: "https://d197for5662m48.cloudfront.net/documents/publicationstatus/286768/preprint_pdf/3e99ce4b8787147379cd01a12dafdd74.pdf"
     selected: y
     year: 2026
@@ -23,6 +28,7 @@ papers:
   - title: "Step-by-Step Reasoning Attack: Revealing 'Erased' Knowledge in Large Language Models"
     authors: "Y Sinha, <b>M Baser</b>, M Mandal, DM Divakaran, M Kankanhalli"
     venue: "Preprint"
+    # venue_type: "core_a"
     paper_pdf: "https://arxiv.org/pdf/2506.17279"
     year: 2025
 
@@ -30,6 +36,7 @@ papers:
   - title: "MEC-Hopper: DRL-Based Adaptive Multi-Hop Service Provisioning in UAV-Assisted MEC"
     authors: "DD Kulkarni, <b>M Baser</b>, M Gurusamy"
     venue: "IEEE 100th Vehicular Technology Conference (IEEE VTC2024-Fall), 2024"
+    # venue_type: "core_a_star"
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10757674"
     selected: y
     year: 2024
@@ -37,6 +44,7 @@ papers:
   - title: "Three-Tier Indirect Tracing Model for Enhancing Epidemic Surveillance"
     authors: "G Bansal, <b>M Baser</b>, V Chamola"
     venue: "IEEE Internet of Things Magazine, 2024"
+    venue_type: "magazine"
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10643985"
     video: "https://www.youtube.com/watch?v=U3PyaXU-TOI"
     code: "https://github.com/manitbaser/CoviFight"
@@ -46,6 +54,7 @@ papers:
   - title: "CRYOMOVE: Cold Chain Real-Time Management of Vaccine Delivery Using PCM and Deep Learning"
     authors: "T Bhatt, <b>M Baser</b>, A Tyagi, EYK Ng"
     venue: "Applied Thermal Engineering, 2024"
+    venue_type: "journal"
     paper_pdf: "https://www.sciencedirect.com/science/article/abs/pii/S1359431124016302"
     selected: y
     year: 2024

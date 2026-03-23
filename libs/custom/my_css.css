@@ -21,7 +21,7 @@
 
   /* --border-color: #eee; */
   --border-color-strong: rgba(0, 0, 0, 0.2);
-  --border-venue: rgb(193, 241, 241);
+  --border-venue: #33C3F0;
 
   --accent-primary: #33C3F0;
   --accent-link: #0066cc;
@@ -61,7 +61,7 @@
 
   /* --border-color: #3a3a3a; */
   --border-color-strong: rgba(255, 255, 255, 0.2);
-  --border-venue: #2a5555;
+  --border-venue: #33C3F0;
 
   --accent-primary: #5ddbff;
   --accent-link: #4da6ff;
@@ -147,17 +147,51 @@ h4 {
   text-transform: none;
   color: var(--text-button);
   background-color: var(--bg-button);
-  border: none;
+  border: 1px solid #3c8ea7;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .venue-badge {
   display: inline-block;
   /* background-color: rgb(246, 250, 243); */
-  padding: 4px 10px;
+  /* padding: 4px 10px; */
   border-radius: 4px;
   font-size: 0.9em;
-  border: 2px solid var(--border-venue);
+  font-style: italic;
+  /* border: 1px solid var(--border-venue); */
 }
+
+.paper .venue-type-badge {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #000000;
+  border: 1px solid #000000;
+  pointer-events: none;
+  cursor: default;
+}
+
+.paper .venue-type-badge:hover {
+  background-color: inherit;
+  color: #000000;
+}
+
+.paper .venue-type-journal {
+  background-color: #fff766;
+}
+
+.paper .venue-type-core_a_star {
+  background-color: #1cff42;
+}
+
+.paper .venue-type-core_a {
+  background-color: #13e3ff;
+}
+
+.paper .venue-type-magazine {
+  background-color: #ffa8c5;
+}
+
 
 .paper .button:hover {
   background-color: var(--bg-button-hover);
@@ -185,8 +219,54 @@ h4 {
   margin-bottom: 0;
 }
 
-.navbar {
-  display: none;
+@media (max-width: 749px) {
+  .navbar {
+    display: block;
+    width: 100%;
+    background: var(--bg-primary);
+    z-index: 99;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  .navbar-item {
+    margin-bottom: 0;
+  }
+
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+
+  .navbar-link.active {
+    color: var(--accent-primary);
+  }
+
+  .navbar-link.navbar-button {
+    display: inline-block;
+    height: 38px;
+    border-radius: 4px;
+    background-color: var(--bg-navbar-button);
+    border: none;
+    padding: 0 15px;
+    line-height: 38px;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 .title-subtitle h3 {

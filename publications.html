@@ -45,6 +45,10 @@ title: Publications
                     <p>{{ paper.authors }}</p>
                     <p><span class="venue-badge">{{ paper.venue }}</span></p>
                     <div class="paper-buttons">
+                        {% if paper.venue_type %}
+                        <span class="button venue-type-badge venue-type-{{ paper.venue_type }}">{{ paper.venue_type |
+                            upcase | replace: "_A_STAR", " A✳" | replace: "_A", " A" }}</span>
+                        {% endif %}
                         {% if paper.paper_pdf %}
                         <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
                                 class="fa-solid fa-book-open"></i></a>
@@ -95,6 +99,10 @@ title: Publications
                     <p>{{ paper.authors }}</p>
                     <p><span class="venue-badge">{{ paper.venue }}</span></p>
                     <div class="paper-buttons">
+                        {% if paper.venue_type %}
+                        <span class="button venue-type-badge venue-type-{{ paper.venue_type }}">{{ paper.venue_type |
+                            upcase | replace: "_A_STAR", " A✳" | replace: "_A", " A" }}</span>
+                        {% endif %}
                         {% if paper.paper_pdf %}
                         <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
                                 class="fa-solid fa-book-open"></i></a>
