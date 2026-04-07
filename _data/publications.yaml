@@ -2,10 +2,12 @@ papers:
     # 2026
   - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
     authors: "<b>M Baser</b>, A Yildiz, DM Divakaran, M Gurusamy"
-    venue: "Preprint"
+    venue: "Findings of the Association for Computational Linguistics (ACL), 2026"
     paper_pdf: "https://arxiv.org/pdf/2603.19297"
     code: "https://anonymous.4open.science/r/CLaRE-488E"
+    selected: y
     year: 2026
+    venue_type: "core_a_star"
 
   - title: "ThinkEval: Practical Evaluation of Knowledge Leakage in LLM Editing using Thought-based Knowledge Graphs"
     authors: "<b>M Baser</b>, DM Divakaran, M Gurusamy"
