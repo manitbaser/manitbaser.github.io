@@ -152,6 +152,10 @@ h4 {
   vertical-align: middle;
 }
 
+[data-theme="dark"] .paper .button:not(.venue-type-badge) {
+  border-color: #ffffff;
+}
+
 .venue-badge {
   display: inline-block;
   /* background-color: rgb(246, 250, 243); */
@@ -166,30 +170,39 @@ h4 {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #000000;
+  background-color: #ffffff;
   border: 1px solid #000000;
   pointer-events: none;
   cursor: default;
 }
 
+[data-theme="dark"] .paper .venue-type-badge {
+  color: #ffffff;
+  background-color: #000000;
+}
+
 .paper .venue-type-badge:hover {
-  background-color: inherit;
   color: #000000;
 }
 
+[data-theme="dark"] .paper .venue-type-badge:hover {
+  color: #ffffff;
+}
+
 .paper .venue-type-journal {
-  background-color: #fff766;
+  border-color: #f7e080;
 }
 
 .paper .venue-type-core_a_star {
-  background-color: #1cff42;
+  border-color: #1cff42;
 }
 
 .paper .venue-type-core_a {
-  background-color: #13e3ff;
+  border-color: #13e3ff;
 }
 
 .paper .venue-type-magazine {
-  background-color: #ffa8c5;
+  border-color: #ffa8c5;
 }
 
 
