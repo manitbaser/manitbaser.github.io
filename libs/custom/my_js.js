@@ -129,7 +129,24 @@ $(document).ready(function () {
     }
   }
 
+  // Mark the active navbar link based on current page
+  function setActiveNavLink() {
+    var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+    $('.navbar-link.navbar-button').each(function() {
+      var linkPath = $(this).attr('href').split('#')[0].replace(/\/$/, '');
+      // For index page links (bio, news, teaching), mark as active only on index
+      if (linkPath === '' || linkPath === '/index.html') {
+        if (currentPath === '' || currentPath.endsWith('/index.html') || currentPath === '/') {
+          $(this).addClass('active');
+        }
+      } else if (currentPath.endsWith(linkPath) || currentPath === linkPath) {
+        $(this).addClass('active');
+      }
+    });
+  }
+
   init();
   initTheme();
+  setActiveNavLink();
 
 });

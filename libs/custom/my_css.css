@@ -24,7 +24,7 @@
   --border-venue: #33C3F0;
 
   --accent-primary: #33C3F0;
-  --accent-link: #0066cc;
+  --accent-link: #cc0000;
   --accent-date: #ff6b6b;
 
   --year-label: #e0e0e0;
@@ -64,7 +64,7 @@
   --border-venue: #33C3F0;
 
   --accent-primary: #5ddbff;
-  --accent-link: #4da6ff;
+  --accent-link: #e87070;
   --accent-date: #ff8a8a;
 
   --year-label: #3a3a3a;
@@ -122,93 +122,218 @@ h4 {
   margin-top: 5px;
 }
 
-.paper {
-  margin-bottom: 20px
+.main-description p a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.4em;
 }
 
-.paper .title {
-  /*text-transform: uppercase; */
+.main-description p a:hover {
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .main-description p a {
+  color: #fff;
+}
+
+.paper {
+  margin-bottom: 20px
 }
 
 .paper p {
   margin-bottom: 2px
 }
 
-.paper-buttons {
-  margin-top: 5px
-}
-
-.paper .button {
-  display: inline-block;
-  height: 25px;
-  padding: 0 25px;
-  font-weight: 400;
-  line-height: 25px;
-  text-transform: none;
-  color: var(--text-button);
-  background-color: var(--bg-button);
-  border: 1px solid #3c8ea7;
-  border-radius: 4px;
-  vertical-align: middle;
-}
-
-[data-theme="dark"] .paper .button:not(.venue-type-badge) {
-  border-color: #ffffff;
-}
-
 .venue-badge {
   display: inline-block;
-  /* background-color: rgb(246, 250, 243); */
-  /* padding: 4px 10px; */
-  border-radius: 4px;
   font-size: 0.9em;
-  font-style: italic;
-  /* border: 1px solid var(--border-venue); */
-}
-
-.paper .venue-type-badge {
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  pointer-events: none;
+  color: #5E5CE6;
+}
+
+[data-theme="dark"] .venue-badge {
+  color: #9e9cf8;
+}
+
+/* ---- Inline pill tags (Paper, Code, venue type, award) ---- */
+.paper-tags {
+  display: inline;
+  white-space: nowrap;
+}
+
+.paper-tag {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 8px;
+  border-radius: 20px;
+  font-size: 0.72em;
+  font-weight: 600;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+}
+
+.paper-tag:hover {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+/* Paper tag – blue (Duddu-style) */
+.tag-paper {
+  background-color: rgba(155, 179, 221, 0.55);
+  color: #000;
+  border: 1px solid rgba(100, 140, 200, 0.7);
+}
+
+/* Code tag – pink/salmon (Duddu-style) */
+.tag-code {
+  background-color: rgba(234, 102, 119, 0.5);
+  color: #000;
+  border: 1px solid rgba(200, 60, 80, 0.6);
+}
+
+/* Slides – purple */
+.tag-slides {
+  background-color: rgba(180, 140, 220, 0.5);
+  color: #000;
+  border: 1px solid rgba(140, 90, 200, 0.6);
+}
+
+/* Poster – orange */
+.tag-poster {
+  background-color: rgba(240, 180, 80, 0.5);
+  color: #000;
+  border: 1px solid rgba(200, 140, 40, 0.6);
+}
+
+/* Demo – teal */
+.tag-demo {
+  background-color: rgba(80, 200, 170, 0.45);
+  color: #000;
+  border: 1px solid rgba(40, 160, 130, 0.6);
+}
+
+/* Data – green */
+.tag-data {
+  background-color: rgba(130, 200, 120, 0.5);
+  color: #000;
+  border: 1px solid rgba(80, 160, 70, 0.6);
+}
+
+/* Venue type tags (Core A*, Journal, etc.) – distinct outlined pill */
+.tag-venue-type {
   cursor: default;
+  font-weight: 700;
+  border: 1px solid transparent;
 }
 
-[data-theme="dark"] .paper .venue-type-badge {
-  color: #ffffff;
-  background-color: #000000;
+.venue-type-core_a_star {
+  color: #000;
+  border-color: rgba(40, 180, 80, 0.8);
+  background-color: rgba(175, 214, 155, 0.6);
 }
 
-.paper .venue-type-badge:hover {
-  color: #000000;
+.venue-type-core_a {
+  color: #000;
+  border-color: rgba(60, 160, 210, 0.8);
+  background-color: rgba(140, 200, 230, 0.55);
 }
 
-[data-theme="dark"] .paper .venue-type-badge:hover {
-  color: #ffffff;
+.venue-type-journal {
+  color: #000;
+  border-color: rgba(210, 180, 40, 0.8);
+  background-color: rgba(240, 220, 100, 0.5);
 }
 
-.paper .venue-type-journal {
-  border-color: #f7e080;
+.venue-type-magazine {
+  color: #000;
+  border-color: rgba(220, 100, 160, 0.8);
+  background-color: rgba(240, 160, 190, 0.5);
 }
 
-.paper .venue-type-core_a_star {
-  border-color: #1cff42;
+/* Award tag – gold/amber */
+.tag-award {
+  cursor: default;
+  background-color: #fff4d5;
+  color: #7a5200;
+  border: 1px solid #f0c840;
+  font-weight: 700;
 }
 
-.paper .venue-type-core_a {
-  border-color: #13e3ff;
+.tag-award i {
+  font-size: 0.9em;
 }
 
-.paper .venue-type-magazine {
-  border-color: #ffa8c5;
+/* Dark mode overrides */
+[data-theme="dark"] .tag-paper {
+  background-color: rgba(100, 140, 200, 0.35);
+  color: #d0e4ff;
+  border-color: rgba(120, 160, 220, 0.6);
 }
 
+[data-theme="dark"] .tag-code {
+  background-color: rgba(200, 60, 80, 0.35);
+  color: #ffc0c8;
+  border-color: rgba(220, 80, 100, 0.6);
+}
 
-.paper .button:hover {
-  background-color: var(--bg-button-hover);
-  color: var(--accent-primary);
+[data-theme="dark"] .tag-slides {
+  background-color: rgba(140, 90, 200, 0.35);
+  color: #e0c8ff;
+  border-color: rgba(160, 110, 220, 0.6);
+}
+
+[data-theme="dark"] .tag-poster {
+  background-color: rgba(200, 140, 40, 0.35);
+  color: #ffe0a0;
+  border-color: rgba(220, 160, 60, 0.6);
+}
+
+[data-theme="dark"] .tag-demo {
+  background-color: rgba(40, 160, 130, 0.35);
+  color: #a0ffe8;
+  border-color: rgba(60, 180, 150, 0.6);
+}
+
+[data-theme="dark"] .tag-data {
+  background-color: rgba(80, 160, 70, 0.35);
+  color: #b0ffb0;
+  border-color: rgba(100, 180, 90, 0.6);
+}
+
+[data-theme="dark"] .tag-venue-type.venue-type-core_a_star {
+  background-color: rgba(40, 160, 80, 0.3);
+  color: #a0ffb8;
+  border-color: rgba(60, 190, 100, 0.7);
+}
+
+[data-theme="dark"] .tag-venue-type.venue-type-core_a {
+  background-color: rgba(60, 140, 200, 0.3);
+  color: #a0d8ff;
+  border-color: rgba(80, 160, 220, 0.7);
+}
+
+[data-theme="dark"] .tag-venue-type.venue-type-journal {
+  background-color: rgba(200, 170, 40, 0.3);
+  color: #ffe090;
+  border-color: rgba(220, 190, 60, 0.7);
+}
+
+[data-theme="dark"] .tag-venue-type.venue-type-magazine {
+  background-color: rgba(200, 80, 140, 0.3);
+  color: #ffb0d8;
+  border-color: rgba(220, 100, 160, 0.7);
+}
+
+[data-theme="dark"] .tag-award {
+  background-color: rgba(180, 140, 20, 0.35);
+  color: #ffe878;
+  border-color: rgba(210, 170, 40, 0.7);
 }
 
 .section-header {
@@ -258,7 +383,6 @@ h4 {
   }
 
   .navbar-link {
-    text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -272,13 +396,33 @@ h4 {
 
   .navbar-link.navbar-button {
     display: inline-block;
-    height: 38px;
-    border-radius: 4px;
-    background-color: var(--bg-navbar-button);
+    height: 30px;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+    color: #B25D5D;
     border: none;
-    padding: 0 15px;
-    line-height: 38px;
+    padding: 0 12px;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
     transition: all 0.2s ease-in-out;
+  }
+
+  .navbar-link.navbar-button.active {
+    border: 1.5px solid #000;
+    color: #B25D5D;
+  }
+
+  [data-theme="dark"] .navbar-link.navbar-button {
+    background-color: #3a3a3a;
+    color: #e09090;
+  }
+
+  [data-theme="dark"] .navbar-link.navbar-button.active {
+    border: 1.5px solid #ddd;
+    color: #e09090;
   }
 }
 
@@ -292,6 +436,44 @@ h4 {
 
 .image {
   text-align: center;
+}
+
+.docs-section a {
+  color: #cc0000;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.docs-section a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Paper/Code tags are <a> elements inside .docs-section — keep their own colors */
+.docs-section a.paper-tag {
+  color: #000;
+  text-decoration: none;
+}
+
+.docs-section a.paper-tag:hover {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+[data-theme="dark"] .docs-section a {
+  color: #e87070;
+}
+
+[data-theme="dark"] .docs-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .docs-section a.paper-tag,
+[data-theme="dark"] .docs-section a.paper-tag:hover {
+  color: #fff;
+  opacity: 1;
 }
 
 .news-section {
@@ -329,6 +511,36 @@ h4 {
 
 .news-section a:hover {
   text-decoration: underline;
+}
+
+/* ---- Teaching page ---- */
+.teaching-institution {
+  margin-bottom: 1.5rem;
+}
+
+.teaching-university {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.teaching-list {
+  list-style: none;
+  padding: 0;
+}
+
+.teaching-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.teaching-item .date {
+  color: var(--accent-date);
+  font-weight: 500;
+  min-width: 110px;
+  flex-shrink: 0;
+  padding-top: 1px;
 }
 
 /*  ================ Project styling  ================ */
@@ -401,11 +613,10 @@ h4 {
   }
 
   .navbar-link {
-    text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .2rem;
-    margin-right: 35px;
+    margin-right: 10px;
     text-decoration: none;
     line-height: 6.5rem;
     color: var(--text-primary);
@@ -417,19 +628,43 @@ h4 {
 
   .navbar-link.navbar-button {
     display: inline-block;
-    height: 38px;
-    border-radius: 4px;
-    background-color: var(--bg-navbar-button);
+    height: 30px;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+    color: #B25D5D;
     border: none;
-    padding: 0 15px;
-    margin-top: 1.3rem;
-    line-height: 38px;
-    transition: all 0.2s ease-in-out;
+    padding: 0 12px;
+    margin-top: 2rem;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+    transition: opacity 0.15s ease;
   }
 
   .navbar-link.navbar-button:hover {
-    background-color: var(--bg-navbar-button-hover);
-    color: var(--accent-primary);
+    opacity: 0.8;
+    background-color: #E9E9E9;
+    color: #B25D5D;
+  }
+
+  .navbar-link.navbar-button.active {
+    border: 1.5px solid #000;
+  }
+
+  [data-theme="dark"] .navbar-link.navbar-button {
+    background-color: #3a3a3a;
+    color: #e09090;
+  }
+
+  [data-theme="dark"] .navbar-link.navbar-button:hover {
+    background-color: #3a3a3a;
+    color: #e09090;
+  }
+
+  [data-theme="dark"] .navbar-link.navbar-button.active {
+    border: 1.5px solid #ccc;
   }
 
   .main-button {

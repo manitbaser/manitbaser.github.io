@@ -41,43 +41,21 @@ title: Publications
 
                 {% for paper in group.items %}
                 <div class="paper">
-                    <p class="title"><b>{{ paper.title }}</b></p>
+                    <p class="title">
+                        <b>{{ paper.title }}</b>
+                        <span class="paper-tags">
+                            {% if paper.paper_pdf %}<a class="paper-tag tag-paper" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>{% endif %}
+                            {% if paper.code %}<a class="paper-tag tag-code" href="{{ paper.code }}" target="_blank">Code</a>{% endif %}
+                            {% if paper.slides %}<a class="paper-tag tag-slides" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>{% endif %}
+                            {% if paper.poster %}<a class="paper-tag tag-poster" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>{% endif %}
+                            {% if paper.video %}<a class="paper-tag tag-demo" href="{{ paper.video }}" target="_blank">Demo</a>{% endif %}
+                            {% if paper.data %}<a class="paper-tag tag-data" href="{{ paper.data }}" target="_blank">Data</a>{% endif %}
+                            {% if paper.venue_type %}<span class="paper-tag tag-venue-type venue-type-{{ paper.venue_type }}">{% if paper.venue_type == "core_a_star" %}Core A✳{% elsif paper.venue_type == "core_a" %}Core A{% elsif paper.venue_type == "journal" %}Journal{% elsif paper.venue_type == "magazine" %}Magazine{% else %}{{ paper.venue_type }}{% endif %}</span>{% endif %}
+                            {% if paper.award %}<span class="paper-tag tag-award"><i class="fa-solid fa-award"></i> {{ paper.award }}</span>{% endif %}
+                        </span>
+                    </p>
                     <p>{{ paper.authors }}</p>
                     <p><span class="venue-badge">{{ paper.venue }}</span></p>
-                    <div class="paper-buttons">
-                        {% if paper.venue_type %}
-                        <span class="button venue-type-badge venue-type-{{ paper.venue_type }}">{{ paper.venue_type |
-                            upcase | replace: "_A_STAR", " A✳" | replace: "_A", " A" }}</span>
-                        {% endif %}
-                        {% if paper.paper_pdf %}
-                        <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
-                                class="fa-solid fa-book-open"></i></a>
-                        {% endif %}
-
-                        {% if paper.slides %}
-                        <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides <i
-                                class="fa-regular fa-file-powerpoint"></i></a>
-                        {% endif %}
-
-                        {% if paper.poster %}
-                        <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                        {% endif %}
-
-                        {% if paper.video %}
-                        <a class="button" href="{{ paper.video }}" target="_blank">Demo <i
-                                class="fa-solid fa-laptop-code"></i></a>
-                        {% endif %}
-
-                        {% if paper.code %}
-                        <a class="button" href="{{ paper.code }}" target="_blank">Code <i
-                                class="fa-solid fa-code"></i></a>
-                        {% endif %}
-
-                        {% if paper.data %}
-                        <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-                        {% endif %}
-
-                    </div>
                 </div>
                 {% endfor %}
                 {% endfor %}
@@ -95,43 +73,21 @@ title: Publications
 
                 {% for paper in group.items %}
                 <div class="paper">
-                    <p class="title"><b>{{ paper.title }}</b></p>
+                    <p class="title">
+                        <b>{{ paper.title }}</b>
+                        <span class="paper-tags">
+                            {% if paper.paper_pdf %}<a class="paper-tag tag-paper" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>{% endif %}
+                            {% if paper.code %}<a class="paper-tag tag-code" href="{{ paper.code }}" target="_blank">Code</a>{% endif %}
+                            {% if paper.slides %}<a class="paper-tag tag-slides" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>{% endif %}
+                            {% if paper.poster %}<a class="paper-tag tag-poster" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>{% endif %}
+                            {% if paper.video %}<a class="paper-tag tag-demo" href="{{ paper.video }}" target="_blank">Demo</a>{% endif %}
+                            {% if paper.data %}<a class="paper-tag tag-data" href="{{ paper.data }}" target="_blank">Data</a>{% endif %}
+                            {% if paper.venue_type %}<span class="paper-tag tag-venue-type venue-type-{{ paper.venue_type }}">{% if paper.venue_type == "core_a_star" %}Core A✳{% elsif paper.venue_type == "core_a" %}Core A{% elsif paper.venue_type == "journal" %}Journal{% elsif paper.venue_type == "magazine" %}Magazine{% else %}{{ paper.venue_type }}{% endif %}</span>{% endif %}
+                            {% if paper.award %}<span class="paper-tag tag-award"><i class="fa-solid fa-award"></i> {{ paper.award }}</span>{% endif %}
+                        </span>
+                    </p>
                     <p>{{ paper.authors }}</p>
                     <p><span class="venue-badge">{{ paper.venue }}</span></p>
-                    <div class="paper-buttons">
-                        {% if paper.venue_type %}
-                        <span class="button venue-type-badge venue-type-{{ paper.venue_type }}">{{ paper.venue_type |
-                            upcase | replace: "_A_STAR", " A✳" | replace: "_A", " A" }}</span>
-                        {% endif %}
-                        {% if paper.paper_pdf %}
-                        <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper <i
-                                class="fa-solid fa-book-open"></i></a>
-                        {% endif %}
-
-                        {% if paper.slides %}
-                        <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides <i
-                                class="fa-regular fa-file-powerpoint"></i></a>
-                        {% endif %}
-
-                        {% if paper.poster %}
-                        <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                        {% endif %}
-
-                        {% if paper.video %}
-                        <a class="button" href="{{ paper.video }}" target="_blank">Demo <i
-                                class="fa-solid fa-laptop-code"></i></a>
-                        {% endif %}
-
-                        {% if paper.code %}
-                        <a class="button" href="{{ paper.code }}" target="_blank">Code <i
-                                class="fa-solid fa-code"></i></a>
-                        {% endif %}
-
-                        {% if paper.data %}
-                        <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-                        {% endif %}
-
-                    </div>
                 </div>
                 {% endfor %}
                 {% endfor %}
