@@ -1,5 +1,11 @@
 papers:
     # 2026
+  - title: "Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents"
+    authors: "A Nawal, M Baser, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2605.29224v1"
+    year: 2026
+
   - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
     authors: "M Baser, A Yildiz, DM Divakaran, M Gurusamy"
     venue: "Findings of the Association for Computational Linguistics (ACL), 2026"
