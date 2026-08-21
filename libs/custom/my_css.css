@@ -187,72 +187,72 @@ h4 {
 .tag-paper {
   background-color: rgba(155, 179, 221, 0.55);
   color: #000;
-  border: 1px solid rgba(100, 140, 200, 0.7);
+  /* border: 1px solid rgba(100, 140, 200, 0.7); */
 }
 
 /* Code tag – pink/salmon (Duddu-style) */
 .tag-code {
   background-color: rgba(234, 102, 119, 0.5);
   color: #000;
-  border: 1px solid rgba(200, 60, 80, 0.6);
+  /* border: 1px solid rgba(200, 60, 80, 0.6); */
 }
 
 /* Slides – purple */
 .tag-slides {
   background-color: rgba(180, 140, 220, 0.5);
   color: #000;
-  border: 1px solid rgba(140, 90, 200, 0.6);
+  /* border: 1px solid rgba(140, 90, 200, 0.6); */
 }
 
 /* Poster – orange */
 .tag-poster {
   background-color: rgba(240, 180, 80, 0.5);
   color: #000;
-  border: 1px solid rgba(200, 140, 40, 0.6);
+  /* border: 1px solid rgba(200, 140, 40, 0.6); */
 }
 
 /* Demo – teal */
 .tag-demo {
   background-color: rgba(80, 200, 170, 0.45);
   color: #000;
-  border: 1px solid rgba(40, 160, 130, 0.6);
+  /* border: 1px solid rgba(40, 160, 130, 0.6); */
 }
 
 /* Data – green */
 .tag-data {
   background-color: rgba(130, 200, 120, 0.5);
   color: #000;
-  border: 1px solid rgba(80, 160, 70, 0.6);
+  /* border: 1px solid rgba(80, 160, 70, 0.6); */
 }
 
 /* Venue type tags (Core A*, Journal, etc.) – distinct outlined pill */
 .tag-venue-type {
   cursor: default;
   font-weight: 700;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
 }
 
 .venue-type-core_a_star {
   color: #000;
-  border-color: rgba(40, 180, 80, 0.8);
-  background-color: rgba(175, 214, 155, 0.6);
+  /* border-color: rgba(40, 180, 80, 0.8); */
+  background-color: rgba(123, 238, 65, 0.6);
 }
 
 .venue-type-core_a {
   color: #000;
-  border-color: rgba(60, 160, 210, 0.8);
+  /* border-color: rgba(60, 160, 210, 0.8); */
   background-color: rgba(140, 200, 230, 0.55);
 }
 
 .venue-type-journal {
   color: #000;
-  border-color: rgba(210, 180, 40, 0.8);
+  /* border-color: rgba(210, 180, 40, 0.8); */
   background-color: rgba(240, 220, 100, 0.5);
 }
 
 .venue-type-magazine {
   color: #000;
-  border-color: rgba(220, 100, 160, 0.8);
+  /* border-color: rgba(220, 100, 160, 0.8); */
   background-color: rgba(240, 160, 190, 0.5);
 }
 
@@ -309,31 +309,31 @@ h4 {
 [data-theme="dark"] .tag-venue-type.venue-type-core_a_star {
   background-color: rgba(40, 160, 80, 0.3);
   color: #a0ffb8;
-  border-color: rgba(60, 190, 100, 0.7);
+  /* border-color: rgba(60, 190, 100, 0.7); */
 }
 
 [data-theme="dark"] .tag-venue-type.venue-type-core_a {
   background-color: rgba(60, 140, 200, 0.3);
   color: #a0d8ff;
-  border-color: rgba(80, 160, 220, 0.7);
+  /* border-color: rgba(80, 160, 220, 0.7); */
 }
 
 [data-theme="dark"] .tag-venue-type.venue-type-journal {
   background-color: rgba(200, 170, 40, 0.3);
   color: #ffe090;
-  border-color: rgba(220, 190, 60, 0.7);
+  /* border-color: rgba(220, 190, 60, 0.7); */
 }
 
 [data-theme="dark"] .tag-venue-type.venue-type-magazine {
   background-color: rgba(200, 80, 140, 0.3);
   color: #ffb0d8;
-  border-color: rgba(220, 100, 160, 0.7);
+  /* border-color: rgba(220, 100, 160, 0.7); */
 }
 
 [data-theme="dark"] .tag-award {
   background-color: rgba(180, 140, 20, 0.35);
   color: #ffe878;
-  border-color: rgba(210, 170, 40, 0.7);
+  /* border-color: rgba(210, 170, 40, 0.7); */
 }
 
 .section-header {
@@ -358,6 +358,10 @@ h4 {
 }
 
 @media (max-width: 749px) {
+  .profile-pic {
+    display: none;
+  }
+
   .navbar {
     display: block;
     width: 100%;
