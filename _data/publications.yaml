@@ -11,7 +11,7 @@ papers:
   - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
     authors: "M Baser, A Yildiz, DM Divakaran, M Gurusamy"
     venue: "ACL-Findings 2026"
-    paper_pdf: "https://arxiv.org/pdf/2603.19297"
+    paper_pdf: "https://aclanthology.org/2026.findings-acl.1469.pdf"
     code: "https://github.com/manitbaser/CLaRE"
     selected: y
     year: 2026
@@ -21,7 +21,7 @@ papers:
     authors: "M Baser, DM Divakaran, M Gurusamy"
     venue: "TMLR 2026"
     venue_type: "journal"
-    paper_pdf: "https://arxiv.org/pdf/2506.01386"
+    paper_pdf: "https://openreview.net/pdf?id=IR2GAw90BB"
     code: "https://github.com/manitbaser/KnowGIC"
     selected: y
     year: 2026
