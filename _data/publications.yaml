@@ -4,6 +4,7 @@ papers:
     authors: "A Nawal, M Baser, M Gurusamy"
     venue: "EMNLP-Findings 2026"
     paper_pdf: "https://arxiv.org/pdf/2605.29224v1"
+    code: "https://huggingface.co/datasets/adityanawal23/HarmURLBench"
     selected: y
     year: 2026
     venue_type: "core_a_star"
