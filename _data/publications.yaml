@@ -1,5 +1,12 @@
 papers:
     # 2026
+  - title: "The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning"
+    authors: "M Baser, A Nawal, DM Divakaran, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2609.29045"
+    code: "https://anonymous.4open.science/r/Toketive"
+    year: 2026
+  
   - title: "Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents"
     authors: "A Nawal, M Baser, M Gurusamy"
     venue: "EMNLP-Findings 2026"
