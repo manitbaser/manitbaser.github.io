@@ -24,11 +24,12 @@
   --border-venue: #33C3F0;
 
   --accent-primary: #33C3F0;
-  --accent-link: #cc0000;
-  --accent-date: #ff6b6b;
+  --accent-link: #003388;
+  --accent-date: #002266;
 
   --year-label: #e0e0e0;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --bullet-color: #000000;
 
   /* Timeline colors */
   --timeline-flag-bg: rgb(248, 248, 248);
@@ -69,6 +70,7 @@
 
   --year-label: #3a3a3a;
   --shadow-color: rgba(0, 0, 0, 0.5);
+  --bullet-color: #ffffff;
 
   /* Timeline colors */
   --timeline-flag-bg: #3a3a3a;
@@ -149,11 +151,27 @@ h4 {
   font-size: 0.9em;
   font-style: normal;
   font-weight: 600;
-  color: #5E5CE6;
+  color: #006688;
 }
 
 [data-theme="dark"] .venue-badge {
-  color: #9e9cf8;
+  color: #ff8585;
+}
+
+.docs-section .paper-links a {
+  color: #003366;
+}
+
+.docs-section .paper-links a:hover {
+  color: #001f4d;
+}
+
+[data-theme="dark"] .docs-section .paper-links a {
+  color: #e87070;
+}
+
+[data-theme="dark"] .docs-section .paper-links a:hover {
+  color: #fff;
 }
 
 /* ---- Inline pill tags (Paper, Code, venue type, award) ---- */
@@ -403,7 +421,7 @@ h4 {
     height: 30px;
     border-radius: 10px;
     background-color: #E9E9E9;
-    color: #B25D5D;
+    color: #003366;
     border: none;
     padding: 0 12px;
     line-height: 30px;
@@ -416,17 +434,17 @@ h4 {
 
   .navbar-link.navbar-button.active {
     border: 1.5px solid #000;
-    color: #B25D5D;
+    color: #003366;
   }
 
   [data-theme="dark"] .navbar-link.navbar-button {
     background-color: #3a3a3a;
-    color: #e09090;
+    color: #e87070;
   }
 
   [data-theme="dark"] .navbar-link.navbar-button.active {
     border: 1.5px solid #ddd;
-    color: #e09090;
+    color: #e87070;
   }
 }
 
@@ -443,7 +461,7 @@ h4 {
 }
 
 .docs-section a {
-  color: #cc0000;
+  color: #003388;
   text-decoration: none;
   font-weight: inherit;
 }
@@ -635,7 +653,7 @@ h4 {
     height: 30px;
     border-radius: 10px;
     background-color: #E9E9E9;
-    color: #B25D5D;
+    color: #003366;
     border: none;
     padding: 0 12px;
     margin-top: 2rem;
@@ -650,7 +668,7 @@ h4 {
   .navbar-link.navbar-button:hover {
     opacity: 0.8;
     background-color: #E9E9E9;
-    color: #B25D5D;
+    color: #003366;
   }
 
   .navbar-link.navbar-button.active {
@@ -659,12 +677,12 @@ h4 {
 
   [data-theme="dark"] .navbar-link.navbar-button {
     background-color: #3a3a3a;
-    color: #e09090;
+    color: #e87070;
   }
 
   [data-theme="dark"] .navbar-link.navbar-button:hover {
     background-color: #3a3a3a;
-    color: #e09090;
+    color: #e87070;
   }
 
   [data-theme="dark"] .navbar-link.navbar-button.active {
@@ -833,6 +851,22 @@ body {
 #teaching {
   position: relative;
   /* Removed padding/border-radius to defer to default or specific layout needs */
+}
+
+/* Bio list styling */
+#bio ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#bio ul li {
+  margin-bottom: 1rem;
+}
+
+#bio ul li::marker {
+  color: var(--bullet-color);
 }
 
 #bio::before,

@@ -1,14 +1,19 @@
 papers:
     # 2026
+  - title: "The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs"
+    authors: "T Aremu<sub style='font-size: 1.5em;'>*</sub>, <b>M Baser<sub style='font-size: 1.5em;'>*</sub></b>, M Gurusamy, N Lukas, DM Divakaran"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2610.03124"
+    year: 2026
+  
   - title: "The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning"
-    authors: "M Baser, A Nawal, DM Divakaran, M Gurusamy"
+    authors: "<b>M Baser</b>, A Nawal, DM Divakaran, M Gurusamy"
     venue: "Preprint"
     paper_pdf: "https://arxiv.org/abs/2609.29045"
-    code: "https://anonymous.4open.science/r/Toketive"
     year: 2026
   
   - title: "Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents"
-    authors: "A Nawal, M Baser, M Gurusamy"
+    authors: "A Nawal, <b>M Baser</b>, M Gurusamy"
     venue: "EMNLP-Findings 2026"
     paper_pdf: "https://arxiv.org/pdf/2605.29224v1"
     code: "https://huggingface.co/datasets/adityanawal23/HarmURLBench"
@@ -17,7 +22,7 @@ papers:
     venue_type: "core_a_star"
 
   - title: "CLaRE-ty Amid Chaos: Quantifying Representational Entanglement to Predict Ripple Effects in LLM Editing"
-    authors: "M Baser, A Yildiz, DM Divakaran, M Gurusamy"
+    authors: "<b>M Baser</b>, A Yildiz, DM Divakaran, M Gurusamy"
     venue: "ACL-Findings 2026"
     paper_pdf: "https://aclanthology.org/2026.findings-acl.1469.pdf"
     code: "https://github.com/manitbaser/CLaRE"
@@ -26,7 +31,7 @@ papers:
     venue_type: "core_a_star"
 
   - title: "ThinkEval: Practical Evaluation of Knowledge Leakage in LLM Editing using Thought-based Knowledge Graphs"
-    authors: "M Baser, DM Divakaran, M Gurusamy"
+    authors: "<b>M Baser</b>, DM Divakaran, M Gurusamy"
     venue: "TMLR 2026"
     venue_type: "journal"
     paper_pdf: "https://openreview.net/pdf?id=IR2GAw90BB"
@@ -34,9 +39,16 @@ papers:
     selected: y
     year: 2026
 
+  - title: "DarKnight: Retrieval-Guided Agentic Framework for Breaking Dark Web CAPTCHA Gates"
+    authors: "B Wu, ZY Yeo, D Tan, <b>M Baser</b>, L Csikor, DM Divakaran"
+    venue: "APWG eCrime 2026"
+    selected: y
+    year: 2026
+    paper_pdf: "https://arxiv.org/pdf/2610.19830"
+
     # 2025
   - title: "Step-by-Step Reasoning Attack: Revealing 'Erased' Knowledge in Large Language Models"
-    authors: "Y Sinha, M Baser, M Mandal, DM Divakaran, M Kankanhalli"
+    authors: "Y Sinha, <b>M Baser</b>, M Mandal, DM Divakaran, M Kankanhalli"
     venue: "Preprint"
     # venue_type: "core_a"
     paper_pdf: "https://arxiv.org/pdf/2506.17279"
@@ -45,7 +57,7 @@ papers:
 
 
   - title: "Three-Tier Indirect Tracing Model for Enhancing Epidemic Surveillance"
-    authors: "G Bansal, M Baser, V Chamola"
+    authors: "G Bansal, <b>M Baser</b>, V Chamola"
     venue: "IEEE IoT Magazine 2024"
     venue_type: "magazine"
     paper_pdf: "https://ieeexplore.ieee.org/abstract/document/10643985"
