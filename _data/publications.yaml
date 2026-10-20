@@ -1,5 +1,17 @@
 papers:
     # 2026
+  - title: "Disentangling Language Effects on Tool Admission and Post-Retrieval Safety"
+    authors: "A Nawal, <b>M Baser</b>, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2610.23093v1"
+    year: 2026
+  
+  - title: "Before Retrieval Begins: Safety and Tool-Use Decisions in LLM Agents"
+    authors: "A Nawal, <b>M Baser</b>, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2610.23071"
+    year: 2026
+
   - title: "The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs"
     authors: "T Aremu<sub style='font-size: 1.5em;'>*</sub>, <b>M Baser<sub style='font-size: 1.5em;'>*</sub></b>, M Gurusamy, N Lukas, DM Divakaran"
     venue: "Preprint"
@@ -45,6 +57,8 @@ papers:
     selected: y
     year: 2026
     paper_pdf: "https://arxiv.org/pdf/2610.19830"
+    video: "https://pypi.org/project/darknight/"
+    code: "https://github.com/Binghui99/DarKnight"
 
     # 2025
   - title: "Step-by-Step Reasoning Attack: Revealing 'Erased' Knowledge in Large Language Models"
