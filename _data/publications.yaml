@@ -1,5 +1,11 @@
 papers:
     # 2026
+  - title: "The Truth Beneath the Tokens: Prompt-Space Recovery of Knowledge Edits in Language Models"
+    authors: "<b>M Baser</b>, RHM Yeo, A Nawal, DM Divakaran, M Gurusamy"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2611.10450"
+    year: 2026
+  
   - title: "Disentangling Language Effects on Tool Admission and Post-Retrieval Safety"
     authors: "A Nawal, <b>M Baser</b>, M Gurusamy"
     venue: "Preprint"
