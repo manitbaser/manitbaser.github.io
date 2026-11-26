@@ -1,5 +1,10 @@
 papers:
     # 2026
+  - title: "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems"
+    authors: "<b>M Baser</b>, V Jain, RHM Yeo, X Yang, MSMS Annamalai, DM Divakaran"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2611.34278"
+    year: 2026
   - title: "The Truth Beneath the Tokens: Prompt-Space Recovery of Knowledge Edits in Language Models"
     authors: "<b>M Baser</b>, RHM Yeo, A Nawal, DM Divakaran, M Gurusamy"
     venue: "Preprint"
